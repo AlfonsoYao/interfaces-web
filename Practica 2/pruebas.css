@@ -1,0 +1,78 @@
+body{
+    margin:0;
+    background-color: #fdfcf7;
+}
+
+
+/* Estilos del header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5dd;
+    padding-inline: 20px;
+}
+
+.header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-family: Cursive;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.header img{
+    padding-inline: 5px;
+}
+
+/* Barra de navegación */
+.navbar {
+    overflow: hidden;
+    background-color: #fe9900;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 0.875em 1em;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #f1f1d5;
+    color: black;
+  }
+
+  /* Buscador */
+ .navbar input{
+  font-family: Cursive;
+  font-weight: bold;
+  margin: 0.88em;
+  float: right;
+  width: 10em;
+  border-radius: 4px;
+  border: 1px solid #9b9696;
+  }
+
+  /* Seccion de imagenes */
+  .novedades {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #99999b;
+    padding-inline: 1%; /* Ajusta el padding en porcentaje */
+    width: auto;
+}
+.novedades img {
+    display: inline-block;
+    max-width: 100%; /* Las imágenes se adaptarán al ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    margin: 1px; /* Añade un margen de 20px a la derecha de cada imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el tamaño especificado */
+    
+}
+.novedades img:last-child {
+    margin-right: 2%; /* Añade un margen de 2% a la derecha de  la última */
+}

@@ -1,0 +1,40 @@
+body{
+    margin:0;
+    background-color: #fdfcf7;
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5dd;
+    padding-inline: 20px;
+}
+
+.logo {
+    width: 50px; /* ajusta el ancho según tus necesidades */
+    padding-left: 30px;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.icons {
+    display: flex;
+}
+
+.icon {
+    margin: 0 5px;
+}
+header h {
+    font-family: Cursive;
+    font-weight: bold;
+}
+
+/*
+img{
+
+}*/
