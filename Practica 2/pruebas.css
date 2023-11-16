@@ -71,8 +71,51 @@ body{
     height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
     margin: 1px; /* Añade un margen de 20px a la derecha de cada imagen */
     object-fit: cover; /* Ajusta la imagen para cubrir el tamaño especificado */
-    
 }
 .novedades img:last-child {
     margin-right: 2%; /* Añade un margen de 2% a la derecha de  la última */
 }
+
+ /* Seccion productos*/
+ #contenedor {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 700px;
+    overflow-y: auto; /* Barra para mover porsi es muy pequeño */
+    position: relative; /* Posicion relativa para poderponer el texto */
+    margin-bottom: 1em;
+}
+.interno {
+    border: 1px solid red;
+    padding: 10px;
+    margin: 5px;
+    margin-top: 1.5em;
+    text-align: center;
+
+   
+}
+.interno img {
+    max-width: 100%;
+    max-height: 200px;
+}
+/*////////////////////////////////////*/
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.texto-esquina-izquierda {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    padding: 5px;
+    margin: 0;
+}
+.subrayado-color {
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-decoration-thickness: 7px;
+}
+/*////////////////////////////////////*/
