@@ -1,0 +1,200 @@
+body{
+    margin:0;
+    background-color: #fdfcf7;
+}
+
+/* Estilos del header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5f5dd;
+    padding-inline: 20px;
+}
+
+.header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-family: Cursive;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.header img{
+    padding-inline: 5px;
+}
+
+/* Barra de navegación */
+.navbar {
+    overflow: hidden;
+    background-color: #fe9900;
+}
+  
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 0.875em 1em;
+    text-decoration: none;
+  }
+  
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #f1f1d5;
+    color: black;
+}
+
+/* Buscador */
+.navbar input{
+  font-family: Cursive;
+  font-weight: bold;
+  margin: 0.88em;
+  float: right;
+  width: 10em;
+  border-radius: 4px;
+  border: 1px solid #9b9696;
+}
+
+  /* Seccion de imagenes */
+.novedades {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #99999b;
+    padding-inline: 1%; /* Ajusta el padding en porcentaje */
+    width: auto;
+}
+.novedades img {
+    display: inline-block;
+    max-width: 25%; /* Las imágenes se adaptarán al ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    margin: 1px; /* Añade un margen de 20px a la derecha de cada imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el tamaño especificado */
+}
+.novedades img:last-child {
+    margin-right: 2%; /* Añade un margen de 2% a la derecha de  la última */
+}
+
+/* Barra lateral */
+.lateral {
+    overflow: hidden;
+    background-color: white;
+    display: flex; /* Utiliza flexbox para alinear los elementos en una fila */
+    flex-direction: column; /* Alinea los elementos en columna (de arriba a abajo) */
+    width: 25%; /* Ajusta el ancho al 20% del contenedor padre */
+    position: relative; /* Cambia de fixed a absolute */
+    right: 0; /* Alinea la barra en la parte izquierda de la página */
+    top: 1em; /* Alinea la barra en la parte superior de la página */
+    border: 2px solid #dcdcdc; /*  borde negro de 2 píxeles */
+}
+  
+.lateral a {
+    font-size: 16px;
+    color: Black;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: 100%; /* Ajusta el ancho al 100% para ocupar toda la anchura del contenedor */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+}
+  
+.lateral a:hover {
+    background-color: #999999;
+    color: black;
+}
+  
+.lateral h4 {
+      padding: 0px 16px;
+}
+  
+/* Estilo para el contenido principal */
+.principal{
+    width: 100%; /*  ajustar el ancho según tus necesidades */
+    /*margin: left; /* Centra el contenedor en la página */
+    display: flex;
+}
+.contenido {
+    /*margin-right: 25%; /* Ajusta el margen izquierdo para dejar espacio para la barra lateral */
+    padding: 1px 16px; /* Ajusta el relleno del contenido */
+    width: 80%;
+}
+
+/* Seccion productos*/
+#contenedor {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+    /*max-width: 700px;*/
+    overflow-y: auto; /* Barra para mover porsi es muy pequeño */
+    position: relative; /* Posicion relativa para poderponer el texto */
+    margin-bottom: 1em;
+}
+.interno {
+    border: 1px solid red;
+    padding: 10px;
+    margin: 5px;
+    margin-top: 2em;
+    text-align: center;
+
+   
+}
+.interno img {
+    max-width: 100%;
+    max-height: 200px;
+}
+
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.texto-esquina-izquierda {
+    position: absolute;
+    top: 0.5em;
+    left: 1em;
+    padding: 5px;
+    margin: 0;
+}
+.subrayado-color {
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-decoration-thickness: 7px;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.izquierda {
+    display: flex;
+    align-items: center;
+}
+
+.izquierda a {
+    color: #fff;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.siguenos {
+    text-align: center;
+}
+
+.logos {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.logos img {
+    width: 30px;
+    margin-left: 10px;
+}
