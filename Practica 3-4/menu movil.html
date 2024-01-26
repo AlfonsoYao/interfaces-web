@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Desplegable en Dispositivos Móviles</title>
     <style>
+        /* Animacion boton */
+        @keyframes rodar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .bola {
+            width: 40px;
+            height: 40px;
+            background-image: url('bola.png');
+            background-size: cover;
+            animation: rodar 10s linear infinite; /* La bola rota constantemente */
+        }
         /* Estilos de la barra lateral */
         .lateral {
             overflow: hidden;
@@ -48,7 +61,6 @@
                 right: 20px;
                 display: block; /* Muestra el botón de menú en dispositivos móviles */
                 cursor: pointer;
-                background-color: lightblue;
                 padding: 10px;
                 text-align: center;
                 font-size: 10px; /* Ajusta el tamaño de la fuente para hacer el botón más pequeño */
@@ -87,7 +99,9 @@
     </div>
 
     <!-- Botón de menú para dispositivos móviles -->
-    <div class="menu-button" onclick="toggleMenu()">☰</div>
+    <div class="menu-button" onclick="toggleMenu()">
+        <div class="bola"></div>
+    </div>
 
     <script>
         function toggleMenu() {
