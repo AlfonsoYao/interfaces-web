@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable en Dispositivos Móviles</title>
+    <style>
+        /* Estilos de la barra lateral */
+        .lateral {
+            overflow: hidden;
+            background-color: white;
+            width: 25%; /* Ajusta el ancho al 25% del contenedor padre */
+            position: relative;
+            right: 0;
+            top: 1em;
+            border: 2px solid #dcdcdc;
+            transition: width 0.5s ease; /* Agrega una transición suave al ancho */
+        }
+          
+        .lateral a {
+            font-size: 16px;
+            color: black;
+            padding: 14px 16px;
+            text-decoration: none;
+            width: 100%;
+            box-sizing: border-box;
+            display: block; /* Hace que los enlaces se muestren como bloques para ocupar toda la anchura */
+        }
+          
+        .lateral a:hover {
+            background-color: #999999;
+            color: black;
+        }
+          
+        .lateral h4 {
+            padding: 0px 16px;
+        }
+
+        /* Estilos para dispositivos móviles */
+        @media only screen and (max-width: 767px) {
+            .lateral {
+                width: 0; /* Oculta la barra lateral por defecto en dispositivos móviles */
+            }
+
+            .menu-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: block; /* Muestra el botón de menú en dispositivos móviles */
+                cursor: pointer;
+                background-color: lightblue;
+                padding: 10px;
+                text-align: center;
+                font-size: 10px; /* Ajusta el tamaño de la fuente para hacer el botón más pequeño */
+                z-index: 999; /* Asegura que el botón esté por encima de otros elementos */
+            }
+
+            .menu-button:hover {
+                background-color: #999999;
+            }
+
+            .lateral.open {
+                width: 50%; /* Muestra la barra lateral cuando se hace clic en el botón */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra lateral -->
+    <div class="lateral" id="lateral">
+        <h4>CATEGORIAS</h4>
+        <a href="#accion">Figuras Accion</a>
+        <a href="#bishoujo">Figuras Bishoujo</a>
+        <a href="#nendoroid">Figuras Nendoroid</a>
+        <a href="#peluches">Peluches</a>
+        <a href="#camisetas">Camisetas</a>
+        <a href="#sudaderas">Sudaderas</a>
+        <a href="#complementos">Complementos</a>
+        <a href="#joyeria">Joyeria</a>
+        <a href="#posters">Posters</a>
+        <a href="#manga">Manga</a>
+        <a href="#alfombrillas">Alfombrillas</a>
+        <a href="#posters">Posters</a>
+        <a href="#calendarios">Calendarios</a>
+        <a href="#pins">Pins</a>
+        <a href="#almohadas">Almohadas</a>
+    </div>
+
+    <!-- Botón de menú para dispositivos móviles -->
+    <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+    <script>
+        function toggleMenu() {
+            var lateral = document.getElementById("lateral");
+            lateral.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
+
+

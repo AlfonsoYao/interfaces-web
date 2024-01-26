@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Color de Fondo según el Dispositivo</title>
+    <style>
+        body {
+            background-color: yellow; /* Color de fondo predeterminado */
+        }
+
+        @media only screen and (max-width: 767px) {
+            /* Estilos para dispositivos móviles */
+            body {
+                background-color: lightblue; /* Cambia el color de fondo a azul claro en dispositivos móviles */
+            }
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            /* Estilos para tabletas */
+            body {
+                background-color: lightgreen; /* Cambia el color de fondo a verde claro en tabletas */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Contenido del Sitio</h1>
+    <!-- Aquí va el resto del contenido de tu sitio web -->
+</body>
+</html>
+

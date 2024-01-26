@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Bola Rodando</title>
+    <style>
+        @keyframes rodar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .bola {
+            width: 100px;
+            height: 100px;
+            background-image: url('bola.png');
+            background-size: cover;
+            animation: rodar 10s linear infinite; /* La bola rota constantemente */
+        }
+    </style>
+</head>
+<body>
+    <div class="bola"></div>
+</body>
+</html>
+
