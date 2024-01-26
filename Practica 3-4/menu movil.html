@@ -5,19 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menú Desplegable en Dispositivos Móviles</title>
     <style>
-        /* Animacion boton */
-        @keyframes rodar {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .bola {
-            width: 40px;
-            height: 40px;
-            background-image: url('bola.png');
-            background-size: cover;
-            animation: rodar 10s linear infinite; /* La bola rota constantemente */
-        }
         /* Estilos de la barra lateral */
         .lateral {
             overflow: hidden;
@@ -74,6 +61,20 @@
             .lateral.open {
                 width: 50%; /* Muestra la barra lateral cuando se hace clic en el botón */
             }
+
+            /* Animacion boton */
+            @keyframes rodar {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+
+            .bola {
+                width: 40px;
+                height: 40px;
+                background-image: url('bola.png');
+                background-size: cover;
+                animation: rodar 10s linear infinite; /* La bola rota constantemente */
+            }
         }
     </style>
 </head>
@@ -111,5 +112,4 @@
     </script>
 </body>
 </html>
-
 
