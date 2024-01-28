@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Logo Otaku</title>
+    <style>
+        /* Estilos del logo */
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-image: url('logo.png');
+            background-size: contain;
+            position: relative;
+            opacity: 0; /* Inicialmente oculto */
+            animation: fadeInOut 4s infinite; /* Animación de aparecer y desaparecer */
+        }
+
+        /* Animación de aparecer y desaparecer */
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; } /* El logo está oculto al inicio y al final */
+            50% { opacity: 1; } /* El logo está visible a la mitad de la animación */
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo"></div>
+</body>
+</html>
+

@@ -23,6 +23,22 @@ body{
     background-color: #f5f5dd;
     padding-inline: 20px;
 }
+        /* Estilos del logo */
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-image: url('logo.png');
+            background-size: contain;
+            position: relative;
+            opacity: 0; /* Inicialmente oculto */
+            animation: fadeInOut 7s infinite; /* Animación de aparecer y desaparecer */
+        }
+
+        /* Animación de aparecer y desaparecer */
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; } /* El logo está oculto al inicio y al final */
+            50% { opacity: 1; } /* El logo está visible a la mitad de la animación */
+        }
 
 .header h1 {
     flex-grow: 1;
@@ -41,8 +57,9 @@ body{
 .navbar {
     overflow: hidden;
     background-color: #fe9900;
+    display: block;
 }
-  
+
 .navbar a {
     float: left;
     font-size: 16px;
@@ -50,23 +67,28 @@ body{
     text-align: center;
     padding: 0.875em 1em;
     text-decoration: none;
-  }
-  
+}
+
 .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: #f1f1d5;
     color: black;
 }
 
-/* Buscador */
-.navbar input{
-  font-family: Cursive;
-  font-weight: bold;
-  margin: 0.88em;
-  float: right;
-  width: 10em;
-  border-radius: 4px;
-  border: 1px solid #9b9696;
+.navbar input {
+    font-family: Cursive;
+    font-weight: bold;
+    margin: 0.88em;
+    float: right;
+    width: 10em;
+    border-radius: 4px;
+    border: 1px solid #9b9696;
 }
+
+.nav-button {
+    display: none;
+}
+
+
 
   /* Seccion de imagenes */
 .novedades {
@@ -77,16 +99,7 @@ body{
     padding: 1%; /* Ajusta el padding en porcentaje */
     width: auto;
 }
-.novedades img {
-    display: inline-block;
-    max-width: 25%; /* Las imágenes se adaptarán al ancho del contenedor */
-    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
-    margin: 1px; /* Añade un margen de 20px a la derecha de cada imagen */
-    object-fit: cover; /* Ajusta la imagen para cubrir el tamaño especificado */
-}
-.novedades img:last-child {
-    margin-right: 2%; /* Añade un margen de 2% a la derecha de  la última */
-}
+
 
 /* Barra lateral */
 .lateral {
@@ -184,7 +197,6 @@ footer {
     justify-content: space-between;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    min-width: 767px;
 }
 
 .izquierda {
@@ -214,21 +226,130 @@ footer {
 }
 
 
+/* Estilos para tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        background-color: rgb(234, 243, 243); /* Cambia el color de fondo a azul claro en dispositivos móviles */
+    }
+    /*navegacion*/
+    .navbar {
+        overflow: hidden;
+        background-color: #fe9900;
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+        transition: height 0.5s ease;
+    }
+
+    .navbar.open {
+        display: block;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 0.875em 1em;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #f1f1d5;
+        color: black;
+    }
+
+    .navbar input {
+        font-family: Cursive;
+        font-weight: bold;
+        margin: 0.88em auto; /* Centra el input verticalmente */
+        display: block; /* Hace que el input ocupe toda la anchura disponible */
+        width: calc(100% - 2em); /* Ajusta el ancho del input */
+        border-radius: 4px;
+        border: 1px solid #9b9696;
+        box-sizing: border-box; /* Incluye el padding en el ancho */
+    }
+
+    .nav-button {
+        display: block;
+        width: 97.7%;
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+        background-color: #fe9900;
+    }
+    #contenedor {
+        background-color: #fdfcf7;
+    }
+}
+
  /* Estilos para dispositivos móviles */
  @media only screen and (max-width: 767px) {
     body {
         background-color: rgb(214, 231, 237); /* Cambia el color de fondo a azul claro en dispositivos móviles */
     }
-
     /* Navegacion */
+    .navbar {
+        overflow: hidden;
+        background-color: #fe9900;
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 999;
+        transition: height 0.5s ease;
+    }
+
+    .navbar.open {
+        display: block;
+    }
+
     .navbar a {
-        flex: 1 0 calc(50% - 20px); /* Ajusta el ancho para mostrar 2 en una fila */
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 0.875em 1em;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #f1f1d5;
+        color: black;
+    }
+
+    .navbar input {
+        font-family: Cursive;
+        font-weight: bold;
+        margin: 0.88em auto; /* Centra el input verticalmente */
+        display: block; /* Hace que el input ocupe toda la anchura disponible */
+        width: calc(100% - 2em); /* Ajusta el ancho del input */
+        border-radius: 4px;
+        border: 1px solid #9b9696;
+        box-sizing: border-box; /* Incluye el padding en el ancho */
+    }
+
+    .nav-button {
+        display: block;
+        width: 97%;
+        cursor: pointer;
+        padding: 10px;
+        text-align: center;
+        font-size: 20px;
+        background-color: #fe9900;
     }
 
     /* Contenido */
     .contenido{
         z-index: 997;
         position: relative;
+        align-items: center;
+        align-content: center;
     }
     /* Barra lateral */ 
     .lateral {
@@ -284,16 +405,19 @@ footer {
     }
     /* Seccion productos */
     #contenedor {
-        display: flex;
-        justify-content: space-between;
-        border: 1px solid black;
         background-color: #fdfcf7;
-        padding: 20px;
         width: 100%;
-        margin: 0 auto;
-        /*max-width: 700px;*/
-        overflow-y: auto; /* Barra para mover porsi es muy pequeño */
-        position: relative; /* Posicion relativa para poderponer el texto */
-        margin-bottom: 1em;
+    }
+
+    /* Pie de pagina */
+
+    .footer{
+        display: block;
+        width: 100vw;
+    }
+    .izquierda{
+        display: block;
+        justify-content: space-between;
+        align-items: center;
     }
 }
