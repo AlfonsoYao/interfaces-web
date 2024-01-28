@@ -30,8 +30,9 @@
     </div>
     <!--Novedades-->
     <div class="novedades">
+      <!--El video se reproduce solo, en loop y sin sonido-->
+      <iframe width="50%" height="auto" src="https://www.youtube.com/embed/l_NBRauLCxc?autoplay=1&mute=1&loop=1" frameborder="0" allowfullscreen></iframe>
 
-      <iframe width="50%" height="auto" src="https://www.youtube.com/embed/l_NBRauLCxc" frameborder="0" allowfullscreen></iframe>
 
     </div>
 
@@ -102,7 +103,7 @@
     
       
       <!-- Barra lateral -->
-      <div class="lateral">
+      <div class="lateral" id="lateral">
         <h4>CATEGORIAS</h4>
         <a href="#accion">Figuras Accion</a>
         <a href="#bishoujo">Figuras Bishoujo</a>
@@ -121,6 +122,17 @@
         <a href="#almohadas">Almohadas</a>
       </div>
     </div>
+
+    <!-- Botón de menú para dispositivos móviles -->
+    <div class="menu-button" onclick="toggleMenu()">
+      <div class="bola animacion"></div>
+  </div>
+  <script>
+    function toggleMenu() {
+        var lateral = document.getElementById("lateral");
+        lateral.classList.toggle("open");
+    }
+</script>
     
     <!-- Pie de pagina -->
     <footer>
