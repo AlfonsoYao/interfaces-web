@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable en Dispositivos Móviles</title>
+    <style>
+        /* Estilos para dispositivos móviles */
+        @media only screen and (max-width: 1023px) {
+            .navbar {
+                overflow: hidden;
+                background-color: #fe9900;
+                display: none;
+                position: absolute;
+                width: 100%;
+                z-index: 999;
+                transition: height 0.5s ease;
+            }
+
+            .navbar.open {
+                display: block;
+            }
+
+            .navbar a {
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 0.875em 1em;
+                text-decoration: none;
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #f1f1d5;
+                color: black;
+            }
+
+            .navbar input {
+                font-family: Cursive;
+                font-weight: bold;
+                margin: 0.88em auto; /* Centra el input verticalmente */
+                display: block; /* Hace que el input ocupe toda la anchura disponible */
+                width: calc(100% - 2em); /* Ajusta el ancho del input */
+                border-radius: 4px;
+                border: 1px solid #9b9696;
+                box-sizing: border-box; /* Incluye el padding en el ancho */
+            }
+
+            .nav-button {
+                display: block;
+                width: 100%;
+                cursor: pointer;
+                padding: 10px;
+                text-align: center;
+                font-size: 20px;
+                background-color: #fe9900;
+            }
+        }
+
+        /* Estilos para el resto de tamaños de pantalla */
+        @media only screen and (min-width: 1024px) {
+            .navbar {
+                overflow: hidden;
+                background-color: #fe9900;
+                display: block;
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 0.875em 1em;
+                text-decoration: none;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: #f1f1d5;
+                color: black;
+            }
+
+            .navbar input {
+                font-family: Cursive;
+                font-weight: bold;
+                margin: 0.88em;
+                float: right;
+                width: 10em;
+                border-radius: 4px;
+                border: 1px solid #9b9696;
+            }
+
+            .nav-button {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón de menú para dispositivos móviles -->
+    <div class="nav-button" onclick="toggleMenu()">≡≡≡</div>
+
+    <!-- Barra de navegación -->
+    <div class="navbar" id="navbar">
+        <a href="#novedades">NOVEDADES</a>
+        <a href="#coleccionables">COLECCIONABLES</a>
+        <a href="#vestimenta">VESTIMENTA</a>
+        <a href="#arte">ARTE</a>
+        <a href="#ofertas">OFERTAS</a>
+        <input type="text" placeholder="Buscar" name="search">
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
