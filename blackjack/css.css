@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+.mesa-exterior {
+    background-color: #8B4513; /* Marrón como madera */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mesa-interior {
+    background-color: #FFD700; /* Dorado */
+    width: 98%;
+    height: 95%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tapete {
+    background-color: #007700; /* Verde de tapetes de casino */
+    width: 98%;
+    height: 95%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#mesa {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#tablero {
+    width: 45%; /* Ajuste el tamaño para que se ajuste mejor en pantallas más pequeñas */
+    text-align: center;
+    border: 2px solid #fff; /* Borde blanco sólido */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 10px;
+}
+
+#tablero p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.mazoGeneral {
+    height: 290px;
+}
+
+.mazoGeneral img {
+    width: 100px;
+    height: 130px;
+    margin: 0 20px 10px 0;
+}
+
+#resultado {
+    height: 50px;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+#botones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    width: 120px;
+    height: 50px;
+    background-color: #28a745; /* Verde */
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #fff; /* Borde blanco sólido */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave de color de fondo y transformación */
+    position: relative; /* Necesario para animación de sombra */
+}
+
+.btn:hover {
+    background-color: #218838; /* Verde oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Eleva ligeramente el botón */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+}
+
+.btn p {
+    margin: 0; /* Elimina el margen interior */
+    text-align: center;
+    color: #fff; /* Texto blanco */
+    transition: transform 0.2s ease; /* Transición suave de transformación */
+}
+
+.btn:hover p {
+    transform: translateY(-1px); /* Ajusta la posición del texto al elevar el botón */
+}

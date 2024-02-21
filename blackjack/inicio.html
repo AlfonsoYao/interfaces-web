@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Blackjack</title>
+    <style>
+        body {
+            font-family: 'Arial Black', Gadget, sans-serif;
+            text-align: center;
+            background-color: #0F6125;
+            color: #FFFFFF;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #E34F00;
+            color: #FFFFFF;
+            border: 2px solid #FFFFFF;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #FFFFFF;
+            color: #E34F00;
+        }
+        #rules-container {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #daa6a6;
+            padding: 20px;
+            border: 2px solid #E34F00;
+            border-radius: 10px;
+            max-width: 80%;
+            z-index: 9999;
+        }
+        #rules-image {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+        #rules-container p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Bienvenido al Blackjack</h1>
+        <button onclick="redirectToGame()">Jugar</button>
+        <button onclick="showRules()">Reglas</button>
+    </div>
+
+    <div id="rules-container">
+        <img id="rules-image" width="200px" height="200px" src="./img/reglas.webp" alt="Reglas del Blackjack">
+        <p>Reglas del Blackjack:</p>
+        <p>☝🤓El objetivo es sumar 21 puntos o acercarse lo más posible sin pasarse.</p>
+        <p>Cada carta numérica vale su valor nominal, las figuras valen 10 puntos y el As puede valer 1 u 11 puntos según convenga al jugador.</p>
+        <button onclick="hideRules()">Cerrar</button>
+    </div>
+
+    <script>
+        function redirectToGame() {
+            // Redirige a la página del juego
+            window.location.href = "tapete.html";
+        }
+
+        function showRules() {
+            // Muestra las reglas del juego
+            const rulesContainer = document.getElementById("rules-container");
+            rulesContainer.style.display = "block";
+        }
+
+        function hideRules() {
+            // Oculta las reglas del juego
+            const rulesContainer = document.getElementById("rules-container");
+            rulesContainer.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
