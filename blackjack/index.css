@@ -1,0 +1,66 @@
+body {
+    font-family: 'Arial Black', Gadget, sans-serif;
+    text-align: center;
+    background-color: #0F6125;
+    color: #FFFFFF;
+    position: relative; /* Añadido para posicionar el botón absoluto */
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #E34F00;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background-color: #FFFFFF;
+    color: #E34F00;
+}
+#rules-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #daa6a6;
+    padding: 20px;
+    border: 2px solid #E34F00;
+    border-radius: 10px;
+    max-width: 80%;
+    z-index: 9999;
+}
+#rules-image {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+#rules-container p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+#promises-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: #E34F00;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#promises-button:hover {
+    background-color: #FFFFFF;
+    color: #E34F00;
+}
