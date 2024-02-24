@@ -28,6 +28,7 @@ body, html {
     text-align: center;
 }
 
+
 #mesa {
     width: 100%;
     display: flex;
@@ -101,4 +102,9 @@ body, html {
 
 .btn:hover p {
     transform: translateY(-1px); /* Ajusta la posición del texto al elevar el botón */
+}
+
+
+#juego {
+    display: none;
 }
