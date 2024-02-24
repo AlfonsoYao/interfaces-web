@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <title>Inicio - Blackjack</title>
+    
+</head>
+<body>
+    <div id="container">
+        <h1>Bienvenido al Blackjack</h1>
+        <button onclick="redirectToGame()">Jugar</button>
+        <button onclick="showRules()">Reglas</button>
+    </div>
+
+    <div id="rules-container">
+        <img id="rules-image" width="200px" height="200px" src="./img/reglas.webp" alt="Reglas del Blackjack">
+        <p>Reglas del Blackjack:</p>
+        <p>☝🤓El objetivo es sumar 21 puntos o acercarse lo más posible sin pasarse.</p>
+        <p>Cada carta numérica vale su valor nominal, las figuras valen 10 puntos y el As puede valer 1 u 11 puntos según convenga al jugador.</p>
+        <button onclick="hideRules()">Cerrar</button>
+    </div>
+
+    <!-- Botón de promesas -->
+    <button id="promises-button" onclick="showPromises()">Promesas</button>
+
+    <script>
+        function redirectToGame() {
+            // Redirige a la página del juego
+            window.location.href = "tapete.html";
+        }
+
+        function showRules() {
+            // Muestra las reglas del juego
+            const rulesContainer = document.getElementById("rules-container");
+            rulesContainer.style.display = "block";
+        }
+
+        function hideRules() {
+            // Oculta las reglas del juego
+            const rulesContainer = document.getElementById("rules-container");
+            rulesContainer.style.display = "none";
+        }
+
+        function showPromises() {
+            // Lógica para mostrar información sobre promesas
+            alert("Te prometo que el juego tiene promesas🥺");
+        }
+    </script>
+</body>
+</html>
+
