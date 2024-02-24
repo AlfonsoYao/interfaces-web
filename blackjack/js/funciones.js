@@ -141,44 +141,51 @@ function puntos() {
     return Number(puntuacion);
 }
 
-// Muestra los resultados del juego
-function resultados() {
+// Función para esperar un tiempo determinado
+function esperar(tiempo) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve();
+        }, tiempo);
+    });
+}
+
+// Muestra los resultados del juego y espera 3 segundos antes de iniciar un nuevo juego
+async function resultados() {
     console.log("PUNTUACION JUG -> " + puntuacionJug + "  PUNTUACION MAQ -> " + puntuacionIA);
+    let mensaje = "";
+    let imagen = "";
     if ((puntuacionJug > puntuacionIA && puntuacionJug <= 21) || (puntuacionIA > 21 && puntuacionJug <= 21)) {
         // Ganó el jugador
-        Swal.fire({
-            title: "Ganaste!",
-            text: "A donde vas tan basado? 🥵🔥",
-            imageUrl: "./img/agua.gif",
-            imageWidth: 400,
-            imageHeight: 200,
-            confirmButtonText: 'Cerrar'
-        });
+        mensaje = "Ganaste!";
+        imagen = "./img/agua.gif";
         console.log("Gana el jugador");
-    } if ((puntuacionIA > puntuacionJug && puntuacionIA <= 21) || (puntuacionJug > 21 && puntuacionIA <= 21)) {
+    } else if ((puntuacionIA > puntuacionJug && puntuacionIA <= 21) || (puntuacionJug > 21 && puntuacionIA <= 21)) {
         // Ganó la máquina
-        Swal.fire({
-            title: "Perdiste!😂",
-            text: "Aprende a jugar manco",
-            imageUrl: "./img/win.gif",
-            imageWidth: 400,
-            imageHeight: 200,
-            confirmButtonText: 'Cerrar'
-        });
+        mensaje = "Perdiste!";
+        imagen = "./img/win.gif";
         console.log("Gana la Máquina");
-    } if (puntuacionIA == puntuacionJug && puntuacionIA <= 21 && puntuacionJug <= 21) {
+    } else if (puntuacionIA == puntuacionJug && puntuacionIA <= 21 && puntuacionJug <= 21) {
         // Empate
-        Swal.fire({
-            title: "Empate!",
-            text: "Qué casualidad.",
-            imageUrl: "./img/empate.gif",
-            imageWidth: 400,
-            imageHeight: 200,
-            confirmButtonText: 'Cerrar'
-        });
+        mensaje = "Empate!";
+        imagen = "./img/empate.gif";
         console.log("Empate");
     }
 
-    resultado.appendChild(nuevo);
+    await Swal.fire({
+        title: mensaje,
+        text: mensaje === "Ganaste!" ? "A donde vas tan basado? 🥵🔥" : mensaje === "Perdiste!" ? "Aprende a jugar manco" : "Qué casualidad.",
+        imageUrl: imagen,
+        imageWidth: 400,
+        imageHeight: 200,
+        confirmButtonText: 'Cerrar'
+    });
+
+    // Espera 3 segundos antes de iniciar un nuevo juego
+    await esperar(3000);
+
+    // Inicia un nuevo juego
+    nuevoJuego();
 }
+
 
