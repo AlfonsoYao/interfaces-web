@@ -73,22 +73,20 @@ body, html {
 }
 
 .btn {
-    width: 120px;
-    height: 50px;
-    background-color: #28a745; /* Verde */
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid #fff; /* Borde blanco sólido */
-    border-radius: 10px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave de color de fondo y transformación */
-    position: relative; /* Necesario para animación de sombra */
+    padding: 15px 30px;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #E34F00;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #218838; /* Verde oscuro al pasar el ratón */
+    background-color: #FFFFFF;
+    color: #E34F00;
     transform: translateY(-3px); /* Eleva ligeramente el botón */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
 }
@@ -96,11 +94,12 @@ body, html {
 .btn p {
     margin: 0; /* Elimina el margen interior */
     text-align: center;
-    color: #fff; /* Texto blanco */
+    color: #FFFFFF; /* Texto blanco */
     transition: transform 0.2s ease; /* Transición suave de transformación */
 }
 
 .btn:hover p {
+    color: #E34F00;
     transform: translateY(-1px); /* Ajusta la posición del texto al elevar el botón */
 }
 
