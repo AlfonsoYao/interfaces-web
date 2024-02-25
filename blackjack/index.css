@@ -12,6 +12,13 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+.image {
+    width: 25%; /* ajusta el ancho según tu necesidad */
+    height: auto; /* ajusta la altura según tu necesidad */
+}
+
+
 button {
     padding: 15px 30px;
     font-size: 20px;
