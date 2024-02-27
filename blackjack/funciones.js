@@ -74,10 +74,14 @@ function repartirCarta() {
     // Verifica si la carta actual es un As
     if (cartas[cont][0] === "1" && (cartas[cont][1] === "P" || cartas[cont][1] === "C" || cartas[cont][1] === "T" || cartas[cont][1] === "D"))  {
         as++; // Incrementa el contador de Ases
+        puntuacionJug += 11; // Temporalmente suma 11 puntos al jugador
+    } else {
+        puntuacionJug += puntos(cartas[cont]);
     }
-
-    puntuacionJug += puntos(cartas[cont]);
     cont++;
+
+    /*puntuacionJug += puntos(cartas[cont]);
+    cont++;*/
 
     // Si se supera 21 y hay Ases, pregunta por el valor de los Ases
     if (puntuacionJug > 21 && as > 0) {
@@ -99,6 +103,22 @@ function repartirCarta() {
 
 // Lógica para que el jugador se plante
 function plantarseJugador() {
+    // Si el jugador decide plantarse y hay Ases, pregunta por el valor de los Ases
+    if (as > 0) {
+        for (let i = 0; i < as; i++) {
+            let respuesta;
+            while (true) {
+                respuesta = prompt("Tienes un As. ¿Cuánto quieres que cuente el As? (1 o 11)");
+                if (respuesta === "1" || respuesta === "11") {
+                    break; // Sale del bucle si la respuesta es válida
+                } else {
+                    alert("Por favor, ingresa solo 1 o 11."); // Alerta si la respuesta no es válida
+                }
+            }
+            puntuacionJug -= 10; // Resta 10 al contador de cartas por cada As que cuente como 11
+        }
+        as = 0; // Reinicia el contador de Ases
+    }
     document.getElementById("carta").setAttribute("disabled", "true");
     document.getElementById("plantarse").setAttribute("disabled", "true");
     juegoIA();
